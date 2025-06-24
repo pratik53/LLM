@@ -8,7 +8,7 @@ from langchain_core.output_parsers import StrOutputParser
 
 # Load env
 load_dotenv()
-os.environ["LANGCHAIN_API_KEY"] = os.getenv("API_KEY")
+os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGSMITH_API_KEY")
 os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGSMITH_PROJECT"] = os.getenv("Project", "gemma-demo")
@@ -69,6 +69,7 @@ st.markdown("""
 # --- Title ---
 st.markdown("## 🌈 Ask Anything to Gemma")
 st.markdown("Powered by **LangChain**, **Ollama**, and **LangSmith**")
+st.markdown("Created by **Pratik Shegaonkar**")
 st.markdown(f"🎯 Project: `{os.getenv('Project', 'gemma-demo')}`")
 
 # --- Prompt Setup ---
